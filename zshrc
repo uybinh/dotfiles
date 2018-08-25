@@ -1,3 +1,8 @@
+# load custom executable functions
+for function in ~/.zsh/functions/*; do
+  source $function
+done
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 

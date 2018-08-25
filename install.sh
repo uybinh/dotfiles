@@ -22,12 +22,18 @@ _move_existed_file() {
 _move_existed_file ".zshrc"
 ln -s $HOME/$dotfilesdir/zshrc                 $HOME/.zshrc
 
+_move_existed_file ".zsh"
+ln -s $HOME/$dotfilesdir/zsh                   $HOME/.zsh
+
 # symlink .aliases
 _move_existed_file ".aliases"
 ln -s $HOME/$dotfilesdir/aliases/aliases           $HOME/.aliases
 
 # _move_existed_file ".editorconfig"
 # ln -s $HOME/$dotfilesdir/editorconfig/editorconfig $HOME/.editorconfig
+
+_move_existed_file ".vimrc"
+ln -s $HOME/$dotfilesdir/vimrc                 $HOME/.vimrc
 
 # symlin .gitignore
 _move_existed_file ".gitignore"
