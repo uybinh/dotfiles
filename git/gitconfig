@@ -1,65 +1,35 @@
-[core]
-	editor = nano
-	pager = diff-so-fancy
-	excludesfile = ~/.gitignore
 [user]
-	name = Jannis R
-	email = mail@jannisr.de
-	signingkey = 296A88A5
-[credential]
-	helper = osxkeychain
-[alias]
-	a = add
-	aa = add --all
-	b = branch --list -v
-	c = commit -m
-	amd = commit --amend
-	cl = clone
-	d = diff
-	f = flow
-	issues = !hub browse -- issues
-	i = issues
-	l = log -10 --abbrev-commit --reverse --date=relative --decorate=short --format=format:'\
-%C(red)%<(7)%h \
-%C(dim white)%<(11,trunc)%an \
-%<(12,trunc)%ar \
-%C(reset)%s'
-	ll = log -10 --abbrev-commit --reverse --date=relative --decorate=short --format=format:'\
-%C(red)%<(7)%h \
-%C(dim white)%<(11,trunc)%an \
-%<(12,trunc)%ar \
-%C(reset)%C(yellow)%s%C(reset)' --stat-name-width=50 --stat-count=20
-	p = push origin
-	pl = pull
-	plr = pull --rebase
-	pr = pull-request
-	pull-request = !hub pull-request
-	r = remote -v
-	rb = rebase
-	rbc = rebase --continue
-	rbi = rebase -i
-	ref = show-ref --tags --heads --abbrev -h
-	s = status -sb
-	show = show --format=format:'%n\
-%C(red)%h \
-%C(yellow)%D %n\
-%C(white)%an \
-%C(dim white)%ar %n\
-%C(reset)%s %n'
-	st = stash
-	stl = stash list
-	stp = stash pop -q
-	tags = tag -l
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+	name = Uy Binh
+	email = uybinh@gmail.com
+[gpg]
+	program = gpg
+[init]
+  templatedir = ~/.git_template
 [push]
-	default = matching
-[color "diff-highlight"]
-	oldNormal = red
-	oldHighlight = red bold 52
-	newNormal = green
-	newHighlight = green bold 22
+  default = current
+[color]
+  ui = auto
+[alias]
+  aa = add --all
+  ap = add --patch
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  ci = commit -v
+  co = checkout
+  pf = push --force-with-lease
+  st = status
+[core]
+	editor = code-insiders
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[merge]
+  ff = only
 [commit]
-	gpgsign = true
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[include]
+  path = ~/.gitconfig.local
+[diff]
+  colorMoved = zebra

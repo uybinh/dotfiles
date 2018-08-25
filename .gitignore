@@ -1,21 +1,4 @@
 .DS_Store
 Thumbs.db
 
-# GTK stuff
-menus
-inkscape
-wireshark
-fontforge
-gtk-2.0
-
-asciinema
-configstore
-fisherman
-hub
-
-fish/*
-!fish/install.fish
-!fish/config.fish
-!fish/fishfile
-
 npm/npmrc
