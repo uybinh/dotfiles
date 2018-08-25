@@ -1,15 +1,42 @@
 #!/bin/sh
 
-$dotfilesdir='dotfiles'
+dotfilesdir='dotfiles'
 
-cd ~/$dotfilesdir
+# support function to move file
+_move_existed_file() {
+  file=$1
+  if [ -L ~/$file ]; then
+    rm ~/$file
+
+  elif [ -e ~/$file ]; then
+    mv ~/$file ~/$file.back
+
+  fi
+}
+
+# cd $HOME/$dotfilesdir
 # git submodule init
 # git submodule update
 
-ln -s ~/$dotfilesdir/editorconfig/editorconfig ~/.editorconfig
-ln -s ~/$dotfilesdir/git/gitignore             ~/.gitignore
-ln -s ~/$dotfilesdir/git/gitconfig             ~/.gitconfig
-ln -s ~/$dotfilesdir/homebrew/brew-aliases     ~/.brew-aliases
-ln -s ~/$dotfilesdir/npm/npmrc                 ~/.npmrc
-ln -s ~/$dotfilesdir/phoenix/index.js        ~/.phoenix.js
-touch ~/.hushlogin
+# symlink .zshrc
+_move_existed_file ".zshrc"
+ln -s $HOME/$dotfilesdir/zshrc                 $HOME/.zshrc
+
+# symlink .aliases
+_move_existed_file ".aliases"
+ln -s $HOME/$dotfilesdir/aliases/aliases           $HOME/.aliases
+
+# _move_existed_file ".editorconfig"
+# ln -s $HOME/$dotfilesdir/editorconfig/editorconfig $HOME/.editorconfig
+
+# symlin .gitignore
+_move_existed_file ".gitignore"
+ln -s $HOME/$dotfilesdir/git/gitignore             $HOME/.gitignore
+
+# symlink .gitconfig
+_move_existed_file ".gitconfig"
+ln -s $HOME/$dotfilesdir/git/gitconfig             $HOME/.gitconfig
+
+# symlink brew-aliases
+_move_existed_file "brew-aliases"
+ln -s $HOME/$dotfilesdir/homebrew/brew-aliases     $HOME/.brew-aliases

@@ -2,9 +2,9 @@
 
 
 
-if [ -e ~/.config ]; then
-	mv ~/.config ~/.config.backup
+if [ -e ~/dotfiles ]; then
+	mv ~/dotfiles ~/dotfiles.backup
 fi
 
-git clone https://github.com/derhuerst/dotfiles.git ~/.config
-source ~/.config/install.sh
+git clone https://github.com/uybinh/dotfiles.git ~/dotfiles
+source ~/dotfiles/install.sh
