@@ -1,18 +1,15 @@
 #!/bin/sh
 
-cd ~/.config
-git submodule init
-git submodule update
+$dotfilesdir='dotfiles'
 
-ln -s ~/.config/editorconfig/editorconfig ~/.editorconfig
-ln -s ~/.config/git/gitignore             ~/.gitignore
-ln -s ~/.config/git/gitconfig             ~/.gitconfig
-ln -s ~/.config/homebrew/brew-aliases     ~/.brew-aliases
-ln -s ~/.config/npm/npmrc                 ~/.npmrc
-ln -s ~/.config/phoenix/index.js        ~/.phoenix.js
+cd ~/$dotfilesdir
+# git submodule init
+# git submodule update
+
+ln -s ~/$dotfilesdir/editorconfig/editorconfig ~/.editorconfig
+ln -s ~/$dotfilesdir/git/gitignore             ~/.gitignore
+ln -s ~/$dotfilesdir/git/gitconfig             ~/.gitconfig
+ln -s ~/$dotfilesdir/homebrew/brew-aliases     ~/.brew-aliases
+ln -s ~/$dotfilesdir/npm/npmrc                 ~/.npmrc
+ln -s ~/$dotfilesdir/phoenix/index.js        ~/.phoenix.js
 touch ~/.hushlogin
-
-
-
-fish fish/install.fish
-fish npm/install.fish
