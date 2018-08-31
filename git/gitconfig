@@ -17,6 +17,7 @@
   co = checkout
   pf = push --force-with-lease
   st = status
+  stpush = subtree push --prefix
 [core]
 	editor = code-insiders
   excludesfile = ~/.gitignore

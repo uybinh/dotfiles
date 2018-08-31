@@ -1,6 +1,7 @@
 # Unix
 alias ll="ls -al"
 alias ln="ln -v"
+alias pwdc="pwd | pbcopy"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
