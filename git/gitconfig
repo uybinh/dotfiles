@@ -3,10 +3,9 @@
 	email = uybinh@gmail.com
 [gpg]
 	program = gpg
-[init]
-  templatedir = ~/.git_template
 [push]
   default = current
+	followTags = true
 [color]
   ui = auto
 [alias]
@@ -19,13 +18,13 @@
   st = status
   stpush = subtree push --prefix
 [core]
-	editor = code-insiders
+	editor = code-insiders --wait
   excludesfile = ~/.gitignore
   autocrlf = input
 [merge]
   ff = only
 [commit]
-  template = ~/.gitmessage
+	verbose = true
 [fetch]
   prune = true
 [rebase]
