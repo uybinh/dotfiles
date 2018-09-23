@@ -7,10 +7,10 @@ _move_existed_file() {
   file=$1
   if [ -L ~/$file ]; then
     rm ~/$file
-
-  elif [ -e ~/$file ]; then
+    
+    elif [ -e ~/$file ]; then
     mv ~/$file ~/$file.back
-
+    
   fi
 }
 
