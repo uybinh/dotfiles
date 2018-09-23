@@ -46,3 +46,7 @@ ln -s $HOME/$dotfilesdir/git/gitconfig             $HOME/.gitconfig
 # symlink brew-aliases
 _move_existed_file "brew-aliases"
 ln -s $HOME/$dotfilesdir/homebrew/brew-aliases     $HOME/.brew-aliases
+
+# symlink eslint
+_move_existed_file ".eslintrc"
+ln -s $HOME/$dotfilesdir/eslint/eslintrc     $HOME/.eslintrc
