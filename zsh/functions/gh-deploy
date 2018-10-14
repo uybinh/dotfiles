@@ -1,8 +1,0 @@
-
-gh-deploy() {
-  while [ -z "$1" ]; do
-    printf "Which folder do you want to deploy to GitHub Pages? "
-    read 1
-  done
-  git subtree push --prefix $1 origin gh-pages
-}

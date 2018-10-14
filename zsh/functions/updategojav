@@ -1,5 +1,0 @@
-updategojav() {
-  cat "$1" > "/Users/uybinh/Documents/programming/web_dev/personal_projects/gojav/db/seeds.json"
-  cd "/Users/uybinh/Documents/programming/web_dev/personal_projects/gojav"
-  acp "Add new seed data"
-}

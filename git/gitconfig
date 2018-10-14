@@ -19,12 +19,13 @@
   stpush = subtree push --prefix
 [core]
 	editor = code-insiders --wait
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/uybinh/.gitignore
   autocrlf = input
 [merge]
   ff = only
 [commit]
 	verbose = true
+	template = /Users/uybinh/.stCommitMsg
 [fetch]
   prune = true
 [rebase]
@@ -33,3 +34,9 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

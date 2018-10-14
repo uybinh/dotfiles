@@ -1,0 +1,7 @@
+# Clone Webdeb-Starter-Kit from git@github.com:uybinh/Webdev-Starter-Kit.git
+
+function swebkit() {
+  git clone git@github.com:uybinh/Webdev-Starter-Kit.git $1
+  cd $1
+  sudo rm -r .git
+}
