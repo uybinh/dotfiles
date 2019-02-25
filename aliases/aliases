@@ -22,7 +22,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias phero="git push heroku master"
 
 # VS Code Insiders
-alias code="code-insiders"
+# alias code="code-insiders"
 
 # ZSH
 alias zshconfig="code ~/.zshrc"

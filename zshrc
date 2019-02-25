@@ -105,7 +105,7 @@ export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh" # default method
 
 # Add NODE_PATH
-export NODE_PATH="/Users/uybinh/.nvm/versions/node/v8.11.3/lib/node_modules"
+export NODE_PATH="/Users/uybinh/.nvm/versions/node/v10.15.1/lib/node_modules"
 
 # Load rbenv
 eval "$(rbenv init -)"
@@ -121,3 +121,7 @@ eval "$(rbenv init -)"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship
